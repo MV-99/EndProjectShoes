@@ -29,30 +29,28 @@ ul {
 }
 
 li {
-    padding: 15px;
+    /* El padding lo manejamos en el enlace para mantener la altura constante
+       y que el icono y el texto queden alineados con flexbox. */
+    margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: #757575;
-    /* Enlaces en gris */
-    display: block;
-    transition: color 0.3s ease;
-    /* Transición suave */
+    color: #757575; /* Enlaces en gris */
+    display: flex;
+    align-items: center; /* centra verticalmente icono y texto */
+    gap: 12px; /* separación consistente entre icono y texto */
+    padding: 12px 20px; /* padding constante por fila */
+    border-radius: 12px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 
 a:hover {
     background-color: #E0EDF5;
-
-    color: #1B4E6D;
-    /* Color del texto en gris azulado */
-    padding: 10px 20px;
-    /* Más espacio alrededor del texto (hace que se vea más grueso) */
-    border-radius: 15px;
-    /* Redondeo en las esquinas */
-    transition: background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
-    /* Suaviza las transiciones */
+    color: #1B4E6D; /* Color del texto en gris azulado */
+    /* No cambiamos padding al hacer hover para evitar saltos y
+       que la altura permanezca constante entre estados. */
 }
 
 /* === Estilos para el primer ul (top links) === */
@@ -116,4 +114,21 @@ a:hover {
 /* Firefox: eliminar el borde interior que aparece en botones al hacer focus */
 .menu-btn::-moz-focus-inner {
     border: 0;
+}
+
+.iconos {
+    /* Forzar tamaño y evitar que el icono colapse o cambie de tamaño */
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* evitar que el icono se reduzca cuando el espacio sea pequeño */
+    color: inherit; /* heredar el color del enlace (útil para hover) */
+}
+
+/* Espaciado vertical uniforme entre elementos de la lista */
+.top-links li,
+.bottom-links li {
+    margin: 4px 0;
 }

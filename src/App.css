@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Layout: espacio para el sidebar fijo */
+.app {
+  /* el sidebar está fijado fuera del flujo, así que usamos padding/margin para dejar espacio */
+  display: block;
+}
+
+.content {
+  /* usar la variable del sidebar si está definida, si no 250px */
+  margin-left: var(--sidebar-width, 250px);
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: margin-left 0.2s ease;
+}
+
+@media screen and (max-width: 768px) {
+  /* en móvil el sidebar se oculta por defecto y queremos que el contenido ocupe todo el ancho */
+  .content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}

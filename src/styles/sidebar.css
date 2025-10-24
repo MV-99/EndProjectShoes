@@ -1,9 +1,11 @@
 .sidebar {
+    /* ancho configurable para reutilizar en otros estilos */
+    --sidebar-width: 250px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 100%;
+    width: var(--sidebar-width);
+    height: 100vh; /* asegurar altura completa de la ventana */
     background-color: white;
     /* Fondo blanco */
     color: #757575;
@@ -15,6 +17,7 @@
     z-index: 1000;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     /* Sombra sutil */
+    overflow-y: auto; /* permitir que el contenido del sidebar haga scroll si es necesario */
 }
 
 .sidebar nav {
@@ -69,8 +72,9 @@ a:hover {
 /* === Botón hamburguesa === */
 .menu-btn {
     position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 12px;
+    left: calc(var(--sidebar-width) + 16px);
+    /* si el sidebar está presente, el botón queda a la derecha del mismo; en móvil se hace visible y el sidebar está oculto */
     font-size: 1.5rem;
     background: none;
     color: #1B4E6D;
@@ -80,7 +84,6 @@ a:hover {
     z-index: 1100;
     display: none;
     outline: none;
-
 
 }
 
@@ -99,6 +102,7 @@ a:hover {
 
     .menu-btn {
         display: block;
+        left: 15px; /* botón en la esquina izquierda en móvil */
     }
 }
 

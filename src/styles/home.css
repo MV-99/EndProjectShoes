@@ -1,0 +1,63 @@
+.titulo{
+    margin-top:0px;
+}
+.boton{
+    color: white;
+    background-color: #1B4E6D;
+    width: 320px;
+    border-radius: 10px;
+    border: none; /* elimina cualquier borde por defecto */
+    outline: none; /* elimina el outline por defecto */
+    box-shadow: none; /* evita sombras en algunos navegadores al enfocar */
+    -webkit-appearance: none; /* normaliza en WebKit */
+    -moz-appearance: none; /* normaliza en Firefox */
+    appearance: none;
+}
+
+/* Quitar indicador visual al enfocar; si quieres accesibilidad, reemplaza por un estilo visible en lugar de eliminarlo */
+.boton:focus,
+.boton:focus-visible,
+.boton:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.caja {
+    width:970px;
+    height:400px;
+    background-color: white;
+    margin-top:50px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#C2C6D1;
+    border-radius:10px;
+    
+}
+.cardTitulo{
+    font-weight: lighter;
+    margin-top: -5px;
+    margin-Left:-50px;
+}
+.cardIcon{
+    margin-top: 10px;
+    margin-Left:-150px;
+    color:#CB95A5;
+}
+.cardTitulo2{
+    font-weight: lighter;
+    margin-top: -5px;
+    margin-Left:-20px;
+}
+.cardTitulo3{
+    font-weight: lighter;
+    margin-top: -5px;
+    margin-Left:-40px;
+}
+.cardTitulo4{
+    font-weight: lighter;
+    margin-top: -5px;
+    margin-Left:-60px;
+}
+.money{
+    margin-left:-75px;
+}

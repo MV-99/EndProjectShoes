@@ -1,0 +1,119 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    /* Fondo blanco */
+    color: #757575;
+    /* Texto gris */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #757575;
+    /* Enlaces en gris */
+    display: block;
+    transition: color 0.3s ease;
+    /* Transición suave */
+}
+
+
+a:hover {
+    background-color: #E0EDF5;
+
+    color: #1B4E6D;
+    /* Color del texto en gris azulado */
+    padding: 10px 20px;
+    /* Más espacio alrededor del texto (hace que se vea más grueso) */
+    border-radius: 15px;
+    /* Redondeo en las esquinas */
+    transition: background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+    /* Suaviza las transiciones */
+}
+
+/* === Estilos para el primer ul (top links) === */
+.top-links {
+    flex-grow: 1;
+}
+
+/* === Estilos para el segundo ul (bottom links) === */
+.bottom-links {
+    padding-top: 20px;
+    /* Espacio entre los ul */
+    border-top: 1px solid #ddd;
+    /* Línea de división arriba */
+}
+
+/* === Botón hamburguesa === */
+.menu-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 1.5rem;
+    background: none;
+    color: #1B4E6D;
+    /* Sin borde para usar el estilo por defecto */
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    display: none;
+    outline: none;
+
+
+}
+
+/* === Responsividad === */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        /* oculto por defecto */
+        width: 200px;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        /* visible al hacer clic */
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+/* Remover cualquier contorno o sombra al pasar el puntero o enfocar el botón hamburguesa */
+.menu-btn:hover,
+.menu-btn:focus,
+.menu-btn:focus-visible {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* Firefox: eliminar el borde interior que aparece en botones al hacer focus */
+.menu-btn::-moz-focus-inner {
+    border: 0;
+}

@@ -1,0 +1,29 @@
+.icono{
+    margin-top:-10px;
+    font-size:20px;
+}
+.card{
+    background-color: white;
+    width: 200px;
+    height:350px;
+    border-style:solid;
+    border-color:#C2C6D1;
+    border-width:1px;
+    border-radius:10px;
+}
+.imagen{
+    background-color:white;
+    width:265px;
+    height:200px;
+    margin-top:-32px;
+    border-radius:10px;
+    margin-left:-33px;
+    border-color:#C2C6D1;
+    border-width:1px;
+    border-style:solid;
+}
+.foto{
+    width:220px;
+    height:205px;
+    margin-left:-30px;
+}

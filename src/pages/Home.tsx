@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/home.css";
-import SellIcon from '@mui/icons-material/Sell';
-import InventoryIcon from '@mui/icons-material/Inventory';
-import PaidIcon from '@mui/icons-material/Paid';
-import GroupIcon from '@mui/icons-material/Group';
+import SellIcon from "@mui/icons-material/Sell";
+import InventoryIcon from "@mui/icons-material/Inventory";
+import PaidIcon from "@mui/icons-material/Paid";
+import GroupIcon from "@mui/icons-material/Group";
 
 const Home: React.FC = () => {
   return (
@@ -11,8 +11,8 @@ const Home: React.FC = () => {
       {/*contenedor principal*/}
       <div className="titulo">
         <h2>Bienvenido a Parajón</h2>
-        <p style={{ marginTop: "-20px" }}>
-          Panel de control principal. Resumen de actividades
+        <p style={{ marginTop: "-20px", color:'#757575' }}>
+          Panel de control principal y resumen de actividades
         </p>
       </div>
       {/*cards*/}
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             borderWidth: "1px",
           }}
         >
-          <SellIcon className="cardIcon"/>
+          <SellIcon className="cardIcon" />
           <h4 className="cardTitulo">Ventas del Mes</h4>
           <h2 className="money">C$0.00</h2>
         </div>
@@ -45,9 +45,9 @@ const Home: React.FC = () => {
             borderWidth: "1px",
           }}
         >
-          <InventoryIcon className="cardIcon"/>
-          <h4  className="cardTitulo2">Productos en Stock</h4>
-           <h2 className="money">C$0.00</h2>
+          <InventoryIcon className="cardIcon" />
+          <h4 className="cardTitulo2">Productos en Stock</h4>
+          <h2 className="money">C$0.00</h2>
         </div>
         {/*cards individuales*/}
         <div
@@ -61,9 +61,9 @@ const Home: React.FC = () => {
             borderWidth: "1px",
           }}
         >
-          <PaidIcon className="cardIcon"/>
+          <PaidIcon className="cardIcon" />
           <h4 className="cardTitulo3">Ingresos Totales</h4>
-           <h2 className="money">C$0.00</h2>
+          <h2 className="money">C$0.00</h2>
         </div>
         {/*cards individuales*/}
         <div
@@ -77,9 +77,9 @@ const Home: React.FC = () => {
             borderWidth: "1px",
           }}
         >
-          <GroupIcon className="cardIcon"/>
+          <GroupIcon className="cardIcon" />
           <h4 className="cardTitulo4">Total Clientes</h4>
-           <h2 className="money">C$0.00</h2>
+          <h2 className="money">C$0.00</h2>
         </div>
       </div>
       {/*fin de las cards*/}
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
       </div>
       {/*parte del historial*/}
       <div className="caja">
-      <h4>Actividad Reciente</h4>
+        <h4>Actividad Reciente</h4>
       </div>
     </div>
   );
